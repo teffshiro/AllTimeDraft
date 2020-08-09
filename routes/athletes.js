@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
       athletes: athletes,
       searchOptions: req.query,
     });
-  } catch {
+  } catch (err) {
     res.redirect("/");
   }
 });
