@@ -1,0 +1,10 @@
+<h2>Search Athletes</h2>
+<form action="/athletes" method="GET">
+  <label>Name</label>
+  <input type="text" name="name" value="<%= searchOptions.name %>" />
+  <button type="submit">Search</button>
+</form>
+<br />
+<% athletes.forEach(athlete =>{ %>
+<div><%= athlete.name %></div>
+<% }) %>
