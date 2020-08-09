@@ -1,0 +1,28 @@
+# GET http://localhost:3000/athletes
+
+# ###
+
+# GET http://localhost:3000/athletes/5f2f2d493923c30d2df47312
+
+# ###
+# POST http://localhost:3000/athletes
+# Content-Type: application/json
+
+# {
+#   "name": "Kyrie Irving",
+#   "era": "Icon"
+# }
+
+# ###
+
+# DELETE http://localhost:3000/athletes/5f2f29b14301b00cfcaa0586
+
+
+# ###
+
+# Patch http://localhost:3000/athletes/5f2f29b14301b00cfcaa0586
+# Content-Type: application/json
+
+# {
+#   "name": "New Name"
+# }
