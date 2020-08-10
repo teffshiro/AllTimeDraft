@@ -10,7 +10,7 @@ router.get("/", async (req, res) => {
   }
   try {
     const athletes = await Athlete.find(searchOptions);
-    res.render("athletes/index", {
+    res.render("athletes", {
       athletes: athletes,
       searchOptions: req.query,
     });
