@@ -10,7 +10,7 @@ router.get("/", async (req, res) => {
   }
   try {
     const athletes = await Athlete.find(searchOptions);
-    res.render("athletes/index", {
+    res.render("athletes", {
       athletes: athletes,
       searchOptions: req.query,
     });
@@ -20,26 +20,26 @@ router.get("/", async (req, res) => {
 });
 
 // New Athlete Route
-router.get("/new", (req, res) => {
-  res.render("athletes/new", { athlete: new Athlete() });
-});
+// router.get("/new", (req, res) => {
+//   res.render("athletes/new", { athlete: new Athlete() });
+// });
 
 // Create Athlete Route
-router.post("/", async (req, res) => {
-  const athlete = new Athlete({
-    name: req.body.name,
-  });
+// router.post("/", async (req, res) => {
+//   const athlete = new Athlete({
+//     name: req.body.name,
+//   });
 
-  try {
-    const newAthlete = await athlete.save();
-    //res.redirect('athletes/${newAthlete.id}')
-    res.redirect("athletes");
-  } catch {
-    res.render("athletes/new", {
-      athlete: athlete,
-      errorMessage: "Error creating Athlete",
-    });
-  }
-});
+//   try {
+//     const newAthlete = await athlete.save();
+//     //res.redirect('athletes/${newAthlete.id}')
+//     res.redirect("athletes");
+//   } catch {
+//     res.render("athletes/new", {
+//       athlete: athlete,
+//       errorMessage: "Error creating Athlete",
+//     });
+//   }
+// });
 
 module.exports = router;
