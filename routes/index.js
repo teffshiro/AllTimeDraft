@@ -5,22 +5,22 @@ const router = express.Router();
 //   res.render("index");
 // });
 
-const Athlete = require("../models/athlete");
-const { restart } = require("nodemon");
-
-//Getting all
-router.get("/", async (req, res) => {
-  try {
-    const athletes = await Athlete.find();
-    res.json(athletes);
-  } catch (err) {
-    res.status(500).json({ message: err.message });
-  }
-});
-
 module.exports = router;
 
 // For previous app
+
+// const Athlete = require("../models/athlete");
+// const { restart } = require("nodemon");
+
+//Getting all
+// router.get("/", async (req, res) => {
+//   try {
+//     const athletes = await Athlete.find();
+//     res.json(athletes);
+//   } catch (err) {
+//     res.status(500).json({ message: err.message });
+//   }
+// });
 
 // //Getting one
 // router.get("/:id", getAthlete, (req, res) => {
