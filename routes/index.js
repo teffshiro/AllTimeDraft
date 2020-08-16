@@ -1,9 +1,9 @@
 const express = require("express");
 const router = express.Router();
 
-// router.get("/", (req, res) => {
-//   res.render("index");
-// });
+router.get("/", (req, res) => {
+  res.render("index");
+});
 
 module.exports = router;
 
@@ -13,14 +13,14 @@ module.exports = router;
 // const { restart } = require("nodemon");
 
 // Getting all
-router.get("/", async (req, res) => {
-  try {
-    const athletes = await Athlete.find();
-    res.json(athletes);
-  } catch (err) {
-    res.status(500).json({ message: err.message });
-  }
-});
+// router.get("/", async (req, res) => {
+//   try {
+//     const athletes = await Athlete.find();
+//     res.json(athletes);
+//   } catch (err) {
+//     res.status(500).json({ message: err.message });
+//   }
+// });
 
 // //Getting one
 // router.get("/:id", getAthlete, (req, res) => {
